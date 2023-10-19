@@ -8,17 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var userInputText = ""
+    @FocusState private var isTextFieldFocused: Bool
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, User")
+        
+        ZStack {
+            Image("backgroundImage")
+                .resizable()
+                .ignoresSafeArea()
+                .aspectRatio(contentMode: .fill)
+            
+            VStack{
+                Spacer()
+                
+                TextField("Insert Text Here", text: $userInputText)
+                //                        .placeholder(when: userInputText.isEmpty, placeholder: {
+                //                            Label("Tell me your feeling here", systemImage: "pencil.line")
+                //                                .foregroundStyle(Color.gray)
+                //                                .padding([.top, .leading, .trailing], 7.0)
+                //    })
+                    .focused($isTextFieldFocused)
+                    .background(Color("textBoxColor"))
+                    .clipShape(RoundedRectangle(cornerRadius: 9))
+                    .textFieldStyle(.roundedBorder)
+                    .foregroundStyle(Color("purpleTextColor"))
+                    .padding()
+                    .submitLabel(.done)
+                    .onSubmit {
+                        isTextFieldFocused = false
+                    }
+                
+                
+            }
+            .padding()
+        }.onTapGesture {
+            isTextFieldFocused = false
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+            
+            ZStack(alignment: alignment) {
+                placeholder().opacity(shouldShow ? 1 : 0)
+                self
+            }
+        }
 }

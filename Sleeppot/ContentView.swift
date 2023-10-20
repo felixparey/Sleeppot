@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
     
     @State var userInputText = ""
     @FocusState private var isTextFieldFocused: Bool
     
+    var chatReadingScene: SKScene {
+        let scene = ReadingChatSzene()
+        scene.size = CGSize(width: 216, height: 216)
+        return scene
+    }
     
     var body: some View {
         
@@ -23,6 +29,8 @@ struct ContentView: View {
             
             VStack{
                 Spacer()
+                SpriteView(scene: self.chatReadingScene, options: [.allowsTransparency])
+                
                 
                 TextField("Insert Text Here", text: $userInputText)
                 //                        .placeholder(when: userInputText.isEmpty, placeholder: {

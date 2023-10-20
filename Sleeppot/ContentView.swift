@@ -46,6 +46,7 @@ struct ContentView: View {
                     .padding()
                     .submitLabel(.done)
                     .onSubmit {
+                        print("Gianrocco had a bachelor party yesterday")
                         isTextFieldFocused = false
                     }
                 

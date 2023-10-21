@@ -12,13 +12,11 @@ struct ContentView: View {
     
     @State var userInputText = ""
     @FocusState private var isTextFieldFocused: Bool
+    @State var buttonOnePressed = false
+                            
     
-    var chatReadingScene: SKScene {
-        let scene = ReadingChatSzene()
-        scene.size = CGSize(width: 216, height: 216)
-        return scene
-    }
-    
+    let scene1 = PottyScene(size: CGSize(width: 216, height: 216))
+    let scene2 = PottyIdleScene(size: CGSize(width: 216, height: 216))
     var body: some View {
         
         ZStack {
@@ -28,8 +26,17 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fill)
             
             VStack{
-                Spacer()
-                SpriteView(scene: self.chatReadingScene, options: [.allowsTransparency])
+                Button("Change") {
+                    buttonOnePressed.toggle()
+                   print(buttonOnePressed)
+                }
+                if buttonOnePressed{
+                    SpriteView(scene: scene1, options: [.allowsTransparency])
+                        .onAppear()
+                }else{
+                    SpriteView(scene: scene2, options: [.allowsTransparency])
+                }
+            //    SpriteView(scene: pottyScene, options: [.allowsTransparency])
                 
                 
                 TextField("Insert Text Here", text: $userInputText)
@@ -49,8 +56,16 @@ struct ContentView: View {
                         print("Gianrocco had a bachelor party yesterday")
                         isTextFieldFocused = false
                     }
-                
-                
+                    .overlay(alignment: .trailing) {
+                        Button {
+                            print("Hello")
+                        } label: {
+                            Circle()
+                                .frame(width: 30, height: 30)
+                                .padding(.trailing, 20)
+                        }
+
+                    }
             }
             .padding()
         }.onTapGesture {
@@ -76,3 +91,5 @@ extension View {
             }
         }
 }
+
+

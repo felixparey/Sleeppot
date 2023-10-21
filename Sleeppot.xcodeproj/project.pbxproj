@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D8679B32AE284BD00B5F110 /* ReadingChatSzene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8679B22AE284BD00B5F110 /* ReadingChatSzene.swift */; };
+		4D8679B32AE284BD00B5F110 /* PottyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8679B22AE284BD00B5F110 /* PottyScene.swift */; };
 		4D8679B52AE2859B00B5F110 /* Atlasses.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */; };
 		4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */; };
 		4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D8679B22AE284BD00B5F110 /* ReadingChatSzene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingChatSzene.swift; sourceTree = "<group>"; };
+		4D8679B22AE284BD00B5F110 /* PottyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyScene.swift; sourceTree = "<group>"; };
 		4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Atlasses.xcassets; sourceTree = "<group>"; };
 		4D9EAD6A2AE1B22100F4AC44 /* Sleeppot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleeppot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			children = (
 				4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */,
 				4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */,
-				4D8679B22AE284BD00B5F110 /* ReadingChatSzene.swift */,
+				4D8679B22AE284BD00B5F110 /* PottyScene.swift */,
 				4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */,
 				4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */,
 				4D9EAD732AE1B22200F4AC44 /* Preview Content */,
@@ -146,7 +146,7 @@
 			files = (
 				4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */,
 				4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */,
-				4D8679B32AE284BD00B5F110 /* ReadingChatSzene.swift in Sources */,
+				4D8679B32AE284BD00B5F110 /* PottyScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

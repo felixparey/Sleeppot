@@ -8,7 +8,9 @@
 import Foundation
 import SpriteKit
 
-class PottyScene: SKScene {
+class PottyScene: SKScene{
+    
+    
     override func didMove(to view: SKView) {
 
     ///`Genral Information about the Scene`
@@ -21,7 +23,13 @@ class PottyScene: SKScene {
         let desiredHeight = desiredWidth
 
         //Creating the TextureAtlas
-        let textureAtlasChatReading = SKTextureAtlas(named: "ChatReadingAnimation")
+        var textureAtlasChatReading = SKTextureAtlas(named: "ChatReadingAnimation")
+        
+        func disableAnimation(){
+            textureAtlasChatReading.preload {
+                
+            }
+        }
         
         // Create an array of textures from the Texture Atlas
         var framesArrayChatReading: [SKTexture] = []
@@ -36,6 +44,7 @@ class PottyScene: SKScene {
         addChild(spriteNodeChatReading)
         
         
+        
         //Animate the SKNode
         let animationChatReading = SKAction.animate(with: framesArrayChatReading, timePerFrame: 0.05)
         spriteNodeChatReading.run(SKAction.repeatForever(animationChatReading))
@@ -44,13 +53,14 @@ class PottyScene: SKScene {
 }
 
 class PottyIdleScene: SKScene {
+    
+    
     override func didMove(to view: SKView) {
 
     ///`Genral Information about the Scene`
         
         //Sets the Background Color to clear
         backgroundColor = .clear
-
         //creating Dimensions
         let desiredWidth: CGFloat = 300// Set your desired width
         let desiredHeight = desiredWidth
@@ -76,6 +86,8 @@ class PottyIdleScene: SKScene {
         //Animate the SKNode
         let animationIdle = SKAction.animate(with: framesArrayIdle, timePerFrame: 0.05)
         spriteNodeIdle.run(SKAction.repeatForever(animationIdle))
+        
+        //find a way to stop the animation when other view is presented
 
     }
     

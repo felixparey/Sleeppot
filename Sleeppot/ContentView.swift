@@ -10,13 +10,13 @@ import SpriteKit
 
 struct ContentView: View {
     
+    //    @StateObject
+    @ObservedObject var viewModel = Controls()
     @State var userInputText = ""
     @FocusState private var isTextFieldFocused: Bool
-    @State var buttonOnePressed = false
-                            
+    @ObservedObject var sceneIdleWrapper = SceneIdleWrapper()
+    @ObservedObject var sceneChatWrapper = SceneChatWrapper()
     
-    let scene1 = PottyScene(size: CGSize(width: 216, height: 216))
-    let scene2 = PottyIdleScene(size: CGSize(width: 216, height: 216))
     var body: some View {
         
         ZStack {
@@ -26,25 +26,27 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fill)
             
             VStack{
-                Button("Change") {
-                    buttonOnePressed.toggle()
-                   print(buttonOnePressed)
+                HStack {
+                    Button("Chat"){
+                        viewModel.scenePresented = 1
+                    }
+                    .foregroundStyle(.white)
+                    
+                    Button("Idle"){
+                        viewModel.scenePresented = 0
+//                        sceneIdle.isHidden = false
+                    }
+                    .foregroundStyle(.white)
                 }
-                if buttonOnePressed{
-                    SpriteView(scene: scene1, options: [.allowsTransparency])
-                        .onAppear()
-                }else{
-                    SpriteView(scene: scene2, options: [.allowsTransparency])
-                }
-            //    SpriteView(scene: pottyScene, options: [.allowsTransparency])
                 
+                    if viewModel.scenePresented == 0{
+                            SpriteView(scene: sceneIdleWrapper.sceneIdle, options: [.allowsTransparency])
+                        
+                    }else if viewModel.scenePresented == 1{
+                            SpriteView(scene: sceneChatWrapper.sceneChat, options: [.allowsTransparency])
+                    }
                 
                 TextField("Insert Text Here", text: $userInputText)
-                //                        .placeholder(when: userInputText.isEmpty, placeholder: {
-                //                            Label("Tell me your feeling here", systemImage: "pencil.line")
-                //                                .foregroundStyle(Color.gray)
-                //                                .padding([.top, .leading, .trailing], 7.0)
-                //    })
                     .focused($isTextFieldFocused)
                     .background(Color("textBoxColor"))
                     .clipShape(RoundedRectangle(cornerRadius: 9))
@@ -64,7 +66,6 @@ struct ContentView: View {
                                 .frame(width: 30, height: 30)
                                 .padding(.trailing, 20)
                         }
-
                     }
             }
             .padding()
@@ -91,5 +92,10 @@ extension View {
             }
         }
 }
+///PLACEHOLDER
 
-
+//                        .placeholder(when: userInputText.isEmpty, placeholder: {
+//                            Label("Tell me your feeling here", systemImage: "pencil.line")
+//                                .foregroundStyle(Color.gray)
+//                                .padding([.top, .leading, .trailing], 7.0)
+//    })

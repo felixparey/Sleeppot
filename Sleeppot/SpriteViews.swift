@@ -6,13 +6,39 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct SpriteViews: View {
+    
+    
+    @ObservedObject var sceneIdleWrapper = SceneIdleWrapper()
+    @ObservedObject var sceneChatWrapper = SceneChatWrapper()
+   // @ObservedObject var sceneITCWrapper = SceneITCWrapper()
+   // @ObservedObject var buttonPressed = ButtonPressed()
+    @Binding var opacityIdle : Double
+    @Binding var opacityChat : Double
+  //  @Binding var opacityITC : Double
+  //  @Binding var buttonPressed : Bool
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            SpriteView(scene: sceneIdleWrapper.sceneIdle, transition: .fade(withDuration: 2.0), options: .allowsTransparency)
+                .opacity(opacityIdle)
+            
+            SpriteView(scene: sceneChatWrapper.sceneChat, options: .allowsTransparency)
+                .opacity(opacityChat)
+            
+//            if buttonPressed{
+//                SpriteView(scene: sceneITCWrapper.sceneITC, options: .allowsTransparency)
+//                    .opacity(opacityChat)
+//            }
+                
+            
+        }
     }
 }
 
-#Preview {
-    SpriteViews()
-}
+//#Preview {
+//    SpriteViews(opacityIdle: $value)
+//}

@@ -28,5 +28,13 @@ class Controls: ObservableObject{
 //    }
 }
 
+class Numbers: ObservableObject{
+    @Published var number = 0
+}
+
+//class ButtonPressed: ObservableObject{
+// @Published var buttonITCIsPressed = false
+//}
+
 
 

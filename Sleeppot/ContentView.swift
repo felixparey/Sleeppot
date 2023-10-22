@@ -40,10 +40,10 @@ struct ContentView: View {
                 }
                 
                     if viewModel.scenePresented == 0{
-                            SpriteView(scene: sceneIdleWrapper.sceneIdle, options: [.allowsTransparency])
+                            SpriteView(scene: sceneIdleWrapper.sceneIdle, options: .allowsTransparency)
                         
                     }else if viewModel.scenePresented == 1{
-                            SpriteView(scene: sceneChatWrapper.sceneChat, options: [.allowsTransparency])
+                            SpriteView(scene: sceneChatWrapper.sceneChat, options: .allowsTransparency)
                     }
                 
                 TextField("Insert Text Here", text: $userInputText)
@@ -71,7 +71,9 @@ struct ContentView: View {
             .padding()
         }.onTapGesture {
             isTextFieldFocused = false
+            
         }
+        
     }
 }
 

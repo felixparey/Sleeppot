@@ -11,7 +11,7 @@ import SwiftUI
 struct SleeppotApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChangeSceneTestView()
         }
     }
 }

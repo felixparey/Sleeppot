@@ -7,8 +7,9 @@
 
 import Foundation
 import SpriteKit
+import SwiftUI
 
-class PottyScene: SKScene{
+class PottyScene: SKScene, ObservableObject{
     
     
     override func didMove(to view: SKView) {
@@ -23,13 +24,7 @@ class PottyScene: SKScene{
         let desiredHeight = desiredWidth
 
         //Creating the TextureAtlas
-        var textureAtlasChatReading = SKTextureAtlas(named: "ChatReadingAnimation")
-        
-        func disableAnimation(){
-            textureAtlasChatReading.preload {
-                
-            }
-        }
+        let textureAtlasChatReading = SKTextureAtlas(named: "ChatReadingAnimation")
         
         // Create an array of textures from the Texture Atlas
         var framesArrayChatReading: [SKTexture] = []
@@ -93,5 +88,40 @@ class PottyIdleScene: SKScene {
     
 }
 
+class IdleToChatScene: SKScene{
+    
+    override func didMove(to view: SKView) {
 
+    ///`Genral Information about the Scene`
+        
+        //Sets the Background Color to clear
+        backgroundColor = .clear
+
+        //creating Dimensions
+        let desiredWidth: CGFloat = 350// Set your desired width
+        let desiredHeight = desiredWidth
+
+        //Creating the TextureAtlas
+        let textureAtlasITC = SKTextureAtlas(named: "IdleToChatAnimation")
+        
+        // Create an array of textures from the Texture Atlas
+        var framesArrayChatReading: [SKTexture] = []
+        for i in 0...(textureAtlasITC.textureNames.count)-1 {
+            let textureChatName = "idletochat\(i)"
+            framesArrayChatReading.append(textureAtlasITC.textureNamed(textureChatName))
+        }
+        
+        // Load the first frame
+        let spriteNodeITC = SKSpriteNode(texture: framesArrayChatReading[0], size: CGSize(width: desiredWidth, height: desiredHeight))
+            spriteNodeITC.position = CGPoint(x: size.width / 2, y: size.height / 2)
+            addChild(spriteNodeITC)
+                
+        
+        //Animate the SKNode
+        let animationChatReading = SKAction.animate(with: framesArrayChatReading, timePerFrame: 0.075)
+        spriteNodeITC.run(SKAction.repeat(animationChatReading, count: 1))
+        
+        
+    }
+}
 

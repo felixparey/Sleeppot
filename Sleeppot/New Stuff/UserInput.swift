@@ -11,4 +11,5 @@ import Observation
 @Observable
 class UserInput{
     var userInput = ""
+    var savedText = ""
 }

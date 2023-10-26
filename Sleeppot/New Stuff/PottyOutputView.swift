@@ -9,13 +9,13 @@ import SwiftUI
 
 struct PottyOutputView: View {
     
-    @State var outputText = "Dummy Text (insert ML output here)Dummy Text (insert ML output here)Dummy Text (insert ML output here)Dummy Text (insert ML output here)Dummy Text (insert ML output here)Dummy Text (insert ML output here)Dummy Text (insert ML output here)"
+    @State var outputText = UserInput()
     @State var scenePresentedVM = ScenePresentedViewModel()
     
     var body: some View {
         
         ZStack(alignment: .bottom){
-            Text(outputText)
+            Text(outputText.savedText)
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 .background(.ultraThinMaterial)

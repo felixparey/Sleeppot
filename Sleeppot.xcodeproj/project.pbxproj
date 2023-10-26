@@ -7,30 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D8679B32AE284BD00B5F110 /* PottyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8679B22AE284BD00B5F110 /* PottyScene.swift */; };
-		4D8679B52AE2859B00B5F110 /* Atlasses.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */; };
+		4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D16793E2AE910FE00D20E69 /* ChatView.swift */; };
+		4D1679412AE9156800D20E69 /* GRespView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679402AE9156800D20E69 /* GRespView.swift */; };
+		4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679442AE917E900D20E69 /* PottyOutputView.swift */; };
+		4D1679472AE9185A00D20E69 /* ScenePresentedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679462AE9185A00D20E69 /* ScenePresentedViewModel.swift */; };
+		4D1679492AE9238800D20E69 /* UserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679482AE9238800D20E69 /* UserInput.swift */; };
+		4D1F20FE2AEA5BC500E1917C /* CloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F20FD2AEA5BC500E1917C /* CloudView.swift */; };
+		4D3962532AE7F2940024F9D8 /* IdleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3962522AE7F2940024F9D8 /* IdleView.swift */; };
+		4D3962572AE7F8930024F9D8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3962562AE7F8930024F9D8 /* MainView.swift */; };
+		4D3962592AE83FC40024F9D8 /* PottyIdleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */; };
 		4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */; };
-		4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */; };
 		4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */; };
 		4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */; };
-		4DFB4CEF2AE429AF004B5EC4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB4CEE2AE429AF004B5EC4 /* Model.swift */; };
-		4DFB4CF12AE432F8004B5EC4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB4CF02AE432F8004B5EC4 /* ViewModel.swift */; };
-		4DFB4CF32AE51519004B5EC4 /* SpriteViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB4CF22AE51519004B5EC4 /* SpriteViews.swift */; };
-		4DFB4CF52AE51724004B5EC4 /* ChangeSceneTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFB4CF42AE51724004B5EC4 /* ChangeSceneTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D8679B22AE284BD00B5F110 /* PottyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyScene.swift; sourceTree = "<group>"; };
-		4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Atlasses.xcassets; sourceTree = "<group>"; };
+		4D16793E2AE910FE00D20E69 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		4D1679402AE9156800D20E69 /* GRespView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRespView.swift; sourceTree = "<group>"; };
+		4D1679442AE917E900D20E69 /* PottyOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyOutputView.swift; sourceTree = "<group>"; };
+		4D1679462AE9185A00D20E69 /* ScenePresentedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePresentedViewModel.swift; sourceTree = "<group>"; };
+		4D1679482AE9238800D20E69 /* UserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInput.swift; sourceTree = "<group>"; };
+		4D1F20FD2AEA5BC500E1917C /* CloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudView.swift; path = ../../../../../../../Downloads/CloudView.swift; sourceTree = "<group>"; };
+		4D3962522AE7F2940024F9D8 /* IdleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleView.swift; sourceTree = "<group>"; };
+		4D3962562AE7F8930024F9D8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyIdleTextView.swift; sourceTree = "<group>"; };
 		4D9EAD6A2AE1B22100F4AC44 /* Sleeppot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleeppot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
-		4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4DFB4CEE2AE429AF004B5EC4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		4DFB4CF02AE432F8004B5EC4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		4DFB4CF22AE51519004B5EC4 /* SpriteViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteViews.swift; sourceTree = "<group>"; };
-		4DFB4CF42AE51724004B5EC4 /* ChangeSceneTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSceneTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3962502AE7F25D0024F9D8 /* Old Stuff */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Old Stuff";
+			sourceTree = "<group>";
+		};
+		4D3962512AE7F2670024F9D8 /* New Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
+				4D3962562AE7F8930024F9D8 /* MainView.swift */,
+				4D1679482AE9238800D20E69 /* UserInput.swift */,
+				4D1679402AE9156800D20E69 /* GRespView.swift */,
+				4D1679442AE917E900D20E69 /* PottyOutputView.swift */,
+				4D1679462AE9185A00D20E69 /* ScenePresentedViewModel.swift */,
+				4D16793E2AE910FE00D20E69 /* ChatView.swift */,
+				4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */,
+				4D1F20FD2AEA5BC500E1917C /* CloudView.swift */,
+			);
+			path = "New Stuff";
+			sourceTree = "<group>";
+		};
 		4D9EAD612AE1B22100F4AC44 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */,
-				4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */,
-				4DFB4CF22AE51519004B5EC4 /* SpriteViews.swift */,
-				4DFB4CF42AE51724004B5EC4 /* ChangeSceneTestView.swift */,
-				4D8679B22AE284BD00B5F110 /* PottyScene.swift */,
-				4DFB4CEE2AE429AF004B5EC4 /* Model.swift */,
-				4DFB4CF02AE432F8004B5EC4 /* ViewModel.swift */,
-				4D8679B42AE2859B00B5F110 /* Atlasses.xcassets */,
+				4D3962502AE7F25D0024F9D8 /* Old Stuff */,
+				4D3962512AE7F2670024F9D8 /* New Stuff */,
 				4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */,
 				4D9EAD732AE1B22200F4AC44 /* Preview Content */,
 			);
@@ -145,7 +167,6 @@
 			files = (
 				4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */,
 				4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */,
-				4D8679B52AE2859B00B5F110 /* Atlasses.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,13 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFB4CF12AE432F8004B5EC4 /* ViewModel.swift in Sources */,
-				4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */,
-				4DFB4CF52AE51724004B5EC4 /* ChangeSceneTestView.swift in Sources */,
-				4DFB4CEF2AE429AF004B5EC4 /* Model.swift in Sources */,
-				4DFB4CF32AE51519004B5EC4 /* SpriteViews.swift in Sources */,
+				4D3962592AE83FC40024F9D8 /* PottyIdleTextView.swift in Sources */,
+				4D1679492AE9238800D20E69 /* UserInput.swift in Sources */,
+				4D1679412AE9156800D20E69 /* GRespView.swift in Sources */,
+				4D3962572AE7F8930024F9D8 /* MainView.swift in Sources */,
+				4D1679472AE9185A00D20E69 /* ScenePresentedViewModel.swift in Sources */,
+				4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */,
+				4D3962532AE7F2940024F9D8 /* IdleView.swift in Sources */,
+				4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */,
+				4D1F20FE2AEA5BC500E1917C /* CloudView.swift in Sources */,
 				4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */,
-				4D8679B32AE284BD00B5F110 /* PottyScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

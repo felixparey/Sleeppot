@@ -15,10 +15,12 @@ struct MainView: View {
     
     @State var userInputText = ""
     @State var scenePresentedVM = ScenePresentedViewModel()
+    @State var showClouds = false
     
     var body: some View {
-        
+
         let textEditor = TextEditorView()
+        
         ZStack{
             VStack {
                 Spacer()
@@ -41,10 +43,14 @@ struct MainView: View {
                 case 0:
                         IdleView()
                             .offset(y: -50)
-
+                    
                 case 1:
+                    ZStack {
                         ChatView()
                             .offset(y: -110)
+                       // CloudView()
+                            
+                    }
                     
                 case 2: ResponseView()
                         .offset(y: -50)
@@ -61,19 +67,38 @@ struct MainView: View {
               //  scenePresentedVM.scenePresented = 0
             }
             
+            
+            
             if scenePresentedVM.scenePresented == 0 || scenePresentedVM.scenePresented == 1{
                 
                 VStack {
                     Spacer()
+                    PottyIdleTextView()
                     textEditor
-                        .onTapGesture {
-                            scenePresentedVM.scenePresented = 1
+                        .onTapGesture() {
+                            showClouds = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                scenePresentedVM.scenePresented = 1
+                                        }
+                            
+                            
                         }
                     Button("GetResponse"){
-                        scenePresentedVM.scenePresented = 2
+                        showClouds = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+                            showClouds = true
+                                    }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            scenePresentedVM.scenePresented = 2
+                                    }
+                        
                     }
                     .foregroundStyle(.white)
                 }
+                
+            }
+            if showClouds == true{
+                CloudView()
             }
             
         }

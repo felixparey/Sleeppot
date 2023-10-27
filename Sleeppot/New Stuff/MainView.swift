@@ -182,6 +182,7 @@ struct TextEditorView: View {
     
     func saveText(){
         userInput.savedText = userInput.userInput
+        print(userInput.savedText)
     }
     
     var body: some View {

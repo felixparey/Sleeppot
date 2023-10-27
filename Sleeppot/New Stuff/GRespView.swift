@@ -80,7 +80,7 @@ struct ResponseView: View{
     var body: some View{
         
         ZStack(alignment: .bottom){
-            GRespView()
+            RespView()
             PottyOutputView()
                 .padding()
             

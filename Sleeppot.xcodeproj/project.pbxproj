@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */; };
-		4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */; };
-		4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */; };
-		4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */; };
+		09A4EB092AED8B3D008CE821 /* SentimentAnalyzer .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB082AED8B3D008CE821 /* SentimentAnalyzer .mlmodel */; };
+		09A4EB0B2AED8B42008CE821 /* MLmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB0A2AED8B42008CE821 /* MLmodel.mlmodel */; };
+		09A4EB0D2AED8B4A008CE821 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB0C2AED8B4A008CE821 /* SleeppotApp.swift */; };
+		09A4EB0F2AED8B50008CE821 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB0E2AED8B50008CE821 /* MainView.swift */; };
+		09A4EB112AED8B56008CE821 /* IdleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB102AED8B56008CE821 /* IdleView.swift */; };
+		09A4EB132AED8B5B008CE821 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB122AED8B5B008CE821 /* ChatView.swift */; };
+		09A4EB152AED8B60008CE821 /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB142AED8B60008CE821 /* ResponseView.swift */; };
+		09A4EB172AED8B64008CE821 /* UserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB162AED8B64008CE821 /* UserInput.swift */; };
+		09A4EB192AED8B6A008CE821 /* PottyOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB182AED8B6A008CE821 /* PottyOutputView.swift */; };
+		09A4EB1B2AED8B6F008CE821 /* ScenePresentedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB1A2AED8B6F008CE821 /* ScenePresentedViewModel.swift */; };
+		09A4EB1D2AED8B74008CE821 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4EB1C2AED8B74008CE821 /* ViewModel.swift */; };
+		09A4EB1F2AED8B7C008CE821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A4EB1E2AED8B7C008CE821 /* Assets.xcassets */; };
+		09A4EB212AED8B80008CE821 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 09A4EB202AED8B80008CE821 /* Preview Content */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09A4EB082AED8B3D008CE821 /* SentimentAnalyzer .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "SentimentAnalyzer .mlmodel"; sourceTree = "<group>"; };
+		09A4EB0A2AED8B42008CE821 /* MLmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLmodel.mlmodel; sourceTree = "<group>"; };
+		09A4EB0C2AED8B4A008CE821 /* SleeppotApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
+		09A4EB0E2AED8B50008CE821 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09A4EB102AED8B56008CE821 /* IdleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdleView.swift; sourceTree = "<group>"; };
+		09A4EB122AED8B5B008CE821 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		09A4EB142AED8B60008CE821 /* ResponseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
+		09A4EB162AED8B64008CE821 /* UserInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInput.swift; sourceTree = "<group>"; };
+		09A4EB182AED8B6A008CE821 /* PottyOutputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PottyOutputView.swift; sourceTree = "<group>"; };
+		09A4EB1A2AED8B6F008CE821 /* ScenePresentedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenePresentedViewModel.swift; sourceTree = "<group>"; };
+		09A4EB1C2AED8B74008CE821 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		09A4EB1E2AED8B7C008CE821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09A4EB202AED8B80008CE821 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		4D9EAD6A2AE1B22100F4AC44 /* Sleeppot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleeppot.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
-		4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,10 +50,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09A4EB072AED8B2D008CE821 /* Sleeppot */ = {
+			isa = PBXGroup;
+			children = (
+				09A4EB082AED8B3D008CE821 /* SentimentAnalyzer .mlmodel */,
+				09A4EB0A2AED8B42008CE821 /* MLmodel.mlmodel */,
+				09A4EB0C2AED8B4A008CE821 /* SleeppotApp.swift */,
+				09A4EB0E2AED8B50008CE821 /* MainView.swift */,
+				09A4EB102AED8B56008CE821 /* IdleView.swift */,
+				09A4EB122AED8B5B008CE821 /* ChatView.swift */,
+				09A4EB142AED8B60008CE821 /* ResponseView.swift */,
+				09A4EB162AED8B64008CE821 /* UserInput.swift */,
+				09A4EB182AED8B6A008CE821 /* PottyOutputView.swift */,
+				09A4EB1A2AED8B6F008CE821 /* ScenePresentedViewModel.swift */,
+				09A4EB1C2AED8B74008CE821 /* ViewModel.swift */,
+				09A4EB1E2AED8B7C008CE821 /* Assets.xcassets */,
+				09A4EB202AED8B80008CE821 /* Preview Content */,
+			);
+			path = Sleeppot;
+			sourceTree = "<group>";
+		};
 		4D9EAD612AE1B22100F4AC44 = {
 			isa = PBXGroup;
 			children = (
-				4D9EAD6C2AE1B22100F4AC44 /* Sleeppot */,
+				09A4EB072AED8B2D008CE821 /* Sleeppot */,
 				4D9EAD6B2AE1B22100F4AC44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,25 +84,6 @@
 				4D9EAD6A2AE1B22100F4AC44 /* Sleeppot.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		4D9EAD6C2AE1B22100F4AC44 /* Sleeppot */ = {
-			isa = PBXGroup;
-			children = (
-				4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */,
-				4D9EAD6F2AE1B22100F4AC44 /* ContentView.swift */,
-				4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */,
-				4D9EAD732AE1B22200F4AC44 /* Preview Content */,
-			);
-			path = Sleeppot;
-			sourceTree = "<group>";
-		};
-		4D9EAD732AE1B22200F4AC44 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */,
-				4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */,
+				09A4EB212AED8B80008CE821 /* Preview Content in Resources */,
+				09A4EB1F2AED8B7C008CE821 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +156,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9EAD702AE1B22100F4AC44 /* ContentView.swift in Sources */,
-				4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */,
+				09A4EB092AED8B3D008CE821 /* SentimentAnalyzer .mlmodel in Sources */,
+				09A4EB172AED8B64008CE821 /* UserInput.swift in Sources */,
+				09A4EB192AED8B6A008CE821 /* PottyOutputView.swift in Sources */,
+				09A4EB1D2AED8B74008CE821 /* ViewModel.swift in Sources */,
+				09A4EB152AED8B60008CE821 /* ResponseView.swift in Sources */,
+				09A4EB0F2AED8B50008CE821 /* MainView.swift in Sources */,
+				09A4EB0D2AED8B4A008CE821 /* SleeppotApp.swift in Sources */,
+				09A4EB0B2AED8B42008CE821 /* MLmodel.mlmodel in Sources */,
+				09A4EB132AED8B5B008CE821 /* ChatView.swift in Sources */,
+				09A4EB1B2AED8B6F008CE821 /* ScenePresentedViewModel.swift in Sources */,
+				09A4EB112AED8B56008CE821 /* IdleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sleeppot/Preview Content\"";
-				DEVELOPMENT_TEAM = QA9FXHQ3QW;
+				DEVELOPMENT_TEAM = UPT325BVP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -285,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.felixparey.Sleeppot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lihuahu.Sleeppot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,7 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sleeppot/Preview Content\"";
-				DEVELOPMENT_TEAM = QA9FXHQ3QW;
+				DEVELOPMENT_TEAM = UPT325BVP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -314,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.felixparey.Sleeppot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lihuahu.Sleeppot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

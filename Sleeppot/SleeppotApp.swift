@@ -1,8 +1,8 @@
 //
-//  SleeppotApp.swift
-//  Sleeppot
+//  SleepotApp.swift
+//  Sleepot
 //
-//  Created by Felix Parey on 19/10/23.
+//  Created by sara hu lihua on 26/10/23.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct SleeppotApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

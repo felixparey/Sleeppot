@@ -9,13 +9,16 @@ import SwiftUI
 
 struct PottyOutputView: View {
     
-    @State var outputText = UserInput()
-    @State var scenePresentedVM = ScenePresentedViewModel()
+    @Environment(UserInput.self) private var outputText
+    @Environment(ScenePresentedViewModel.self) private var scenePresentedVM
+    @Environment(ViewModel.self) private var mlOutput
+    
+    
     
     var body: some View {
         
         ZStack(alignment: .bottom){
-            Text(outputText.savedText)
+            Text(mlOutput.MLmodelPrediction)
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 .background(.ultraThinMaterial)

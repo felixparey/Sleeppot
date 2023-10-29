@@ -12,15 +12,12 @@ import SwiftUI
 
 struct MainView: View {
     
-    
-    @State var userInputText = UserInput()
-    @State var scenePresentedVM = ScenePresentedViewModel()
-    @State var showClouds = false
+    @Environment(ScenePresentedViewModel.self) private var scenePresentedVM
     
     func presentClouds(){
-        showClouds = false
+        scenePresentedVM.showClouds = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
-            showClouds = true
+        scenePresentedVM.showClouds = true
         }
     }
     
@@ -32,7 +29,7 @@ struct MainView: View {
     
     func setCloudsFalse(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            showClouds = false
+            scenePresentedVM.showClouds = false
         }
     }
     
@@ -121,29 +118,29 @@ struct MainView: View {
                     PottyIdleTextView()
                     textEditor
                         .onTapGesture() {
-                            showClouds = true
+                            scenePresentedVM.showClouds = true
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                 scenePresentedVM.scenePresented = 1
-                                        }
+                            }
                             
                             
                         }
-                    Button("GetResponse"){
-                        hideKeyboard()
-                        presentClouds()
-                        changeSceneWithDelay(scene: 2)
-                        print("Text: \(userInputText.userInput)")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            showClouds = false
-                        }
-                        
-                        
-                    }
-                    .foregroundStyle(.white)
+                    //                    Button("GetResponse"){
+                    //                        hideKeyboard()
+                    //                        presentClouds()
+                    //                        changeSceneWithDelay(scene: 2)
+                    //                        print("Text: \(userInputText.userInput)")
+                    //                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    //                            showClouds = false
+                    //                        }
+                    //
+                    //
+                    //                    }
+                    //                    .foregroundStyle(.white)
                 }
                 
             }
-            if showClouds == true{
+            if scenePresentedVM.showClouds == true{
                 CloudView()
             }
             
@@ -177,17 +174,32 @@ extension View {
 
 
 struct TextEditorView: View {
-    @State var userInput = UserInput()
-    @State var scenePresentedVM = ScenePresentedViewModel()
+    @Environment(UserInput.self) private var userInput
+    @Environment(ScenePresentedViewModel.self) private var scenePresentedVM
+    @Environment(ViewModel.self) private var viewModel
+    @State private var userText = ""
     
     func saveText(){
         userInput.savedText = userInput.userInput
         print(userInput.savedText)
     }
     
+    func presentClouds(){
+        scenePresentedVM.showClouds = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+        scenePresentedVM.showClouds = true
+        }
+    }
+    
+    func changeSceneWithDelay(scene: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            scenePresentedVM.scenePresented = scene
+        }
+    }
+    
     var body: some View {
-        TextEditor(text: $userInput.userInput)
-            .placeholder(when: userInput.userInput.isEmpty, placeholder: {
+        TextEditor(text: $userText)
+            .placeholder(when: userText.isEmpty, placeholder: {
                 VStack{
                     Label("Tell me your feelings here...", systemImage: "pencil.line")
                         .foregroundStyle(Color.gray)
@@ -204,9 +216,18 @@ struct TextEditorView: View {
             .padding()
             .overlay(alignment: .topTrailing) {
                 Button(action: {
-                    saveText()
-                    userInput.userInput = ""
+                    userInput.savedText = userText
+                    userText = ""
+                    viewModel.analyzeSentimentButtonTapped(userInput.savedText)
                     hideKeyboard()
+                    presentClouds()
+                    changeSceneWithDelay(scene: 2)
+                    print(userInput.savedText)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    scenePresentedVM.showClouds = false
+                    }
+                    
+                    
                 }, label: {
                     Circle()
                         .frame(width: 30, height: 30)

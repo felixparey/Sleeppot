@@ -13,4 +13,5 @@ import Observation
 @Observable
 class ScenePresentedViewModel{
     var scenePresented = 0
+    var showClouds = false
 }

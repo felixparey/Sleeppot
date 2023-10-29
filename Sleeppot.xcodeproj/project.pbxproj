@@ -20,6 +20,9 @@
 		4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */; };
 		4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */; };
 		4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */; };
+		4DB3ED952AEE7CBA004D1D93 /* MLmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3ED942AEE7CBA004D1D93 /* MLmodel.mlmodel */; };
+		4DB3ED972AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3ED962AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel */; };
+		4DB3ED992AEE7CD8004D1D93 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3ED982AEE7CD8004D1D93 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
 		4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DB3ED942AEE7CBA004D1D93 /* MLmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLmodel.mlmodel; path = "../../../../../../../Downloads/MLsentiment-main/Sleepot/Sleepot/MLmodel.mlmodel"; sourceTree = "<group>"; };
+		4DB3ED962AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "SentimentAnalyzer .mlmodel"; path = "../../../../../../../Downloads/MLsentiment-main/Sleepot/Sleepot/SentimentAnalyzer .mlmodel"; sourceTree = "<group>"; };
+		4DB3ED982AEE7CD8004D1D93 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = "../../../../../../../Downloads/MLsentiment-main/Sleepot/Sleepot/ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
+				4DB3ED942AEE7CBA004D1D93 /* MLmodel.mlmodel */,
+				4DB3ED962AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel */,
 				4D3962562AE7F8930024F9D8 /* MainView.swift */,
 				4D1679482AE9238800D20E69 /* UserInput.swift */,
 				4D1679402AE9156800D20E69 /* GRespView.swift */,
 				4D1679442AE917E900D20E69 /* PottyOutputView.swift */,
 				4D1679462AE9185A00D20E69 /* ScenePresentedViewModel.swift */,
+				4DB3ED982AEE7CD8004D1D93 /* ViewModel.swift */,
 				4D16793E2AE910FE00D20E69 /* ChatView.swift */,
 				4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */,
 				4D1F20FD2AEA5BC500E1917C /* CloudView.swift */,
@@ -181,11 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3962592AE83FC40024F9D8 /* PottyIdleTextView.swift in Sources */,
+				4DB3ED952AEE7CBA004D1D93 /* MLmodel.mlmodel in Sources */,
 				4D1679492AE9238800D20E69 /* UserInput.swift in Sources */,
 				4D1679412AE9156800D20E69 /* GRespView.swift in Sources */,
 				4D3962572AE7F8930024F9D8 /* MainView.swift in Sources */,
 				4D1679472AE9185A00D20E69 /* ScenePresentedViewModel.swift in Sources */,
+				4DB3ED992AEE7CD8004D1D93 /* ViewModel.swift in Sources */,
 				4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */,
+				4DB3ED972AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel in Sources */,
 				4D4C5F802AEBDC4B00CB30F8 /* RespView.swift in Sources */,
 				4D3962532AE7F2940024F9D8 /* IdleView.swift in Sources */,
 				4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */,

@@ -66,9 +66,9 @@
 		4D3962512AE7F2670024F9D8 /* New Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
 				4DB3ED942AEE7CBA004D1D93 /* MLmodel.mlmodel */,
 				4DB3ED962AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel */,
+				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
 				4D3962562AE7F8930024F9D8 /* MainView.swift */,
 				4D1679482AE9238800D20E69 /* UserInput.swift */,
 				4D1679402AE9156800D20E69 /* GRespView.swift */,

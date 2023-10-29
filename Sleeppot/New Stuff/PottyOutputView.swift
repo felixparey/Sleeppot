@@ -18,30 +18,30 @@ struct PottyOutputView: View {
     var body: some View {
         
         ZStack(alignment: .bottom){
-            Text(mlOutput.MLmodelPrediction)
+            Text(mlOutput.mlModelPrediction)
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 .background(.ultraThinMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .foregroundStyle(.white)
-            .multilineTextAlignment(.center)
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 30)
             
             Button(action: {
-                
-//Maybe not go back to chat but just get different random line
-                scenePresentedVM.scenePresented = 1
+                mlOutput.analyzeSentimentButtonTapped(outputText.savedText)
+                //Maybe not go back to chat but just get different random line
+                //  scenePresentedVM.scenePresented = 1
                 
             }, label: {
-                Circle()
-                
-                    .frame(width: 40)
-                    .overlay {
-                        Image(systemName: "arrow.clockwise")
-                            .foregroundStyle(.white)
-                    }
-                    .offset(y: 30)
-                    
-            })
+                ZStack() {
+                    Circle()
+                        .frame(width: 40)
+                    Image(systemName: "arrow.clockwise")
+                        .foregroundStyle(.white)
+                }
+
+            }
+            )
         }
     }
 }

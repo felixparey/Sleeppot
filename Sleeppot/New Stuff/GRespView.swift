@@ -12,6 +12,7 @@ struct GRespView: View {
     @State private var yOffset = 0.0
     @State private var starScale: CGFloat = 0.0 // Added scale state
     @State private var isLooping = false
+    @Environment(ScenePresentedViewModel.self) private var scenePresented
 
     var body: some View {
         ZStack {
@@ -20,20 +21,20 @@ struct GRespView: View {
                 .resizable()
                 .offset(x: 0.0, y: -27 + yOffset)
                 .shadow(color: .gray, radius: 30)
-            
+                .scaleEffect(x:1.2,y:1.2)
             // Star (behind the head)
             Image("star")
                 .resizable()
                 .scaleEffect(starScale) // Apply scale effect
                 .offset(x: 0, y: -40)
-                .shadow(color:.shadowhead ,radius: 50)
+                .shadow(color:.shadowhead ,radius: 80)
             
             // Head
             VStack {
                 Image("headGResp")
                     .resizable()
-                    .scaleEffect(x: 1.1, y: 1.1)
-                    .offset(x: -3, y: 6 + yOffset)
+                    .scaleEffect(x: 1.3, y: 1.3)
+                    .offset(x: -3, y: 0 + yOffset)
                     .shadow(color: .shadowhead, radius: 30)
 
                 Slider(value: $degrees, in: -10.0...10.0)
@@ -47,12 +48,26 @@ struct GRespView: View {
     }
 
     func animateRotation() {
-        Timer.scheduledTimer(withTimeInterval: 1.8, repeats: true) { _ in
+        
+        var timeInterval = 0.0
+        var counter = 0
+        
+        if scenePresented.scenePresented == 2{
+            counter += 1
+        }
+        if counter == 0{
+            timeInterval = 0
+        }else{
+            timeInterval = 1.8
+        }
+        
+        
+        Timer.scheduledTimer(withTimeInterval: TimeInterval(timeInterval), repeats: true) { _ in
             withAnimation(Animation.easeInOut(duration: 1.5)) {
                 degrees = degrees == 10.0 ? -10.0 : 10.0
             }
-            withAnimation(Animation.linear(duration: 8)) {
-                yOffset = yOffset == 30.0 ? -30.0 : 30.0
+            withAnimation(Animation.easeInOut(duration: 6)) {
+                yOffset = yOffset == 50.0 ? -50.0 : 50.0
                 
             }
             // Scale the star from 0 to 1 and then make it disappear
@@ -80,7 +95,7 @@ struct ResponseView: View{
     var body: some View{
         
         ZStack(alignment: .bottom){
-            RespView()
+            GRespView()
             PottyOutputView()
                 .padding()
             

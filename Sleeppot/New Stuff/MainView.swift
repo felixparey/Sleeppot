@@ -22,13 +22,13 @@ struct MainView: View {
     }
     
     func changeSceneWithDelay(scene: Int){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             scenePresentedVM.scenePresented = scene
         }
     }
     
     func setCloudsFalse(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             scenePresentedVM.showClouds = false
         }
     }
@@ -119,7 +119,7 @@ struct MainView: View {
                     textEditor
                         .onTapGesture() {
                             scenePresentedVM.showClouds = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 scenePresentedVM.scenePresented = 1
                             }
                             
@@ -187,55 +187,68 @@ struct TextEditorView: View {
     func presentClouds(){
         scenePresentedVM.showClouds = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
-        scenePresentedVM.showClouds = true
+            scenePresentedVM.showClouds = true
         }
     }
     
     func changeSceneWithDelay(scene: Int){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             scenePresentedVM.scenePresented = scene
         }
     }
     
     var body: some View {
-        TextEditor(text: $userText)
-            .placeholder(when: userText.isEmpty, placeholder: {
-                VStack{
-                    Label("Tell me your feelings here...", systemImage: "pencil.line")
-                        .foregroundStyle(Color.gray)
-                        .padding([.top, .leading, .trailing], 7.0)
-                    Spacer()
-                }
-            })
-            .textFieldStyle(.roundedBorder)
-            .foregroundStyle(Color("purpleTextColor"))
-            .scrollContentBackground(.hidden)
-            .background(Color("textBoxColor"))
-            .frame(height: 120)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding()
-            .overlay(alignment: .topTrailing) {
-                Button(action: {
-                    userInput.savedText = userText
-                    userText = ""
-                    viewModel.analyzeSentimentButtonTapped(userInput.savedText)
-                    hideKeyboard()
-                    presentClouds()
-                    changeSceneWithDelay(scene: 2)
-                    print(userInput.savedText)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    scenePresentedVM.showClouds = false
-                    }
-                    
-                    
-                }, label: {
-                    Circle()
-                        .frame(width: 30, height: 30)
-                })
-                .padding([.top, .trailing], 20.0)
+        
+        let butto = Button(action: {
+            userInput.savedText = userText
+            userText = ""
+            viewModel.analyzeSentimentButtonTapped(userInput.savedText)
+            hideKeyboard()
+            presentClouds()
+            changeSceneWithDelay(scene: 2)
+            print(userInput.savedText)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                scenePresentedVM.showClouds = false
             }
-    }
-}
+            
+            
+        }, label: {
+            ZStack{
+                Circle()
+                Image(systemName: "arrow.up")
+                    .foregroundStyle(.white)
+            }
+            .frame(width: 30, height: 30)
+            
+        })
+            TextEditor(text: $userText)
+                .placeholder(when: userText.isEmpty, placeholder: {
+                    VStack{
+                        Label("Tell me your feelings here...", systemImage: "pencil.line")
+                            .foregroundStyle(Color.gray)
+                            .padding([.top, .leading, .trailing], 7.0)
+                        Spacer()
+                    }
+                })
+                .lineLimit(4)
+                .textFieldStyle(.roundedBorder)
+                .foregroundStyle(Color("purpleTextColor"))
+                .scrollContentBackground(.hidden)
+                .background(Color("textBoxColor"))
+                .frame(height: 120)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding()
+                .overlay(alignment: .bottomTrailing) {
+                    butto
+                        .opacity(scenePresentedVM.scenePresented == 1 ? 1 : 0)
+                        .padding([.bottom, .trailing], 20.0)
+                    
+                }
+                    
+                }
+        }
+    
+
 
 
 

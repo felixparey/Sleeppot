@@ -1,77 +1,24 @@
-//
-//  ChatView.swift
-//  Sleeppot
-//
-//  Created by Felix Parey on 25/10/23.
-//
-
 import SwiftUI
 
 struct ChatView: View {
-    
-    @State private var yOffset = 0.0
-    @State private var eyeXOffset = 0.0
-    @State private var scale: CGFloat = 1.0
-    @State private var isScalingUp = false
+    let frameCount = 48 // Assuming frames are named from resp0 to resp47
+    @State private var currentFrame: Int = 0
 
     var body: some View {
-        ZStack {
-            
-
-            ChatContainerView(yOffset: $yOffset, eyeXOffset: $eyeXOffset, scale: $scale)
-        }
-        .onAppear() {
-            animateRotation()
-        }
-    }
-
-    func animateRotation() {
-        Timer.scheduledTimer(withTimeInterval: 1.8, repeats: true) { _ in
-            withAnimation(Animation.linear(duration: 12)) {
-                yOffset = yOffset == 15.0 ? -15.0 : 15.0
-            }
-            withAnimation(Animation.easeInOut(duration: 8)) {
-                if scale == 1.0 {
-                    scale = 1.3
-                } else {
-                    scale = 1.0
-                }
-            }
-            withAnimation(Animation.easeInOut(duration: 4)) {
-                eyeXOffset = eyeXOffset == 18.0 ? -18.0 : 18.0
-            }
-        }
-    }
-}
-
-struct ChatContainerView: View {
-    @Binding var yOffset: Double
-    @Binding var eyeXOffset: Double
-    @Binding var scale: CGFloat
-    
-    var body: some View {
-        ZStack {
-            Image("chat")
+        GeometryReader { geometry in
+            Image("resp\(currentFrame)")
                 .resizable()
-                .offset(x: 0.0, y: -27 + yOffset)
-                .scaleEffect(scale)
-                .shadow(color: .gray, radius: 30)
-                .zIndex(0)
-
-            VStack {
-                Image("eyes2")
-                    .resizable()
-                    .scaleEffect(x: 0.8 * scale) // Scale the "eyes" based on the overall scale factor
-                    .offset(x: eyeXOffset, y: -33)
-                    .shadow(color: .red, radius: 100)
-                    .zIndex(1)
-            }
+                .aspectRatio(contentMode: .fill)
+                .scaleEffect(x:2.0,y:2.0)
+                .offset(x:0,y:-40)
+                .shadow(color:.shadowhead,radius: 50)
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .onAppear {
+                    // Create a timer for the animation loop (1/24 fps)
+                    Timer.scheduledTimer(withTimeInterval: 1.0 / 24.0, repeats: true) { timer in
+                        currentFrame = (currentFrame + 1) % frameCount
+                    }
+                }
         }
-    }
-}
-
-struct Chat_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
     }
 }

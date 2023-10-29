@@ -8,8 +8,6 @@
 import Foundation
 import Observation
 
-
-
 @Observable
 class ScenePresentedViewModel{
     var scenePresented = 0

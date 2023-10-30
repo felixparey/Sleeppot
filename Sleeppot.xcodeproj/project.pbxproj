@@ -17,6 +17,8 @@
 		4D3962592AE83FC40024F9D8 /* PottyIdleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */; };
 		4D4E02C42AF0422100A0BADE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E02C32AF0422100A0BADE /* ViewModel.swift */; };
 		4D4E02C62AF0431000A0BADE /* CloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E02C52AF0431000A0BADE /* CloudView.swift */; };
+		4D4E02C82AF0686F00A0BADE /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E02C72AF0686F00A0BADE /* LandingPageView.swift */; };
+		4D4E02CA2AF068B800A0BADE /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E02C92AF068B800A0BADE /* Landing.swift */; };
 		4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */; };
 		4D9EAD722AE1B22200F4AC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */; };
 		4D9EAD752AE1B22200F4AC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EAD742AE1B22200F4AC44 /* Preview Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		4D3962582AE83FC40024F9D8 /* PottyIdleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyIdleTextView.swift; sourceTree = "<group>"; };
 		4D4E02C32AF0422100A0BADE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4D4E02C52AF0431000A0BADE /* CloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudView.swift; sourceTree = "<group>"; };
+		4D4E02C72AF0686F00A0BADE /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		4D4E02C92AF068B800A0BADE /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
 		4D9EAD6A2AE1B22100F4AC44 /* Sleeppot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleeppot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeppotApp.swift; sourceTree = "<group>"; };
 		4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				4DB3ED942AEE7CBA004D1D93 /* MLmodel.mlmodel */,
 				4DB3ED962AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel */,
 				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
+				4D4E02C72AF0686F00A0BADE /* LandingPageView.swift */,
+				4D4E02C92AF068B800A0BADE /* Landing.swift */,
 				4D3962562AE7F8930024F9D8 /* MainView.swift */,
 				4D1679482AE9238800D20E69 /* UserInput.swift */,
 				4D1679402AE9156800D20E69 /* GRespView.swift */,
@@ -192,11 +198,13 @@
 				4D4E02C62AF0431000A0BADE /* CloudView.swift in Sources */,
 				4D1679412AE9156800D20E69 /* GRespView.swift in Sources */,
 				4D3962572AE7F8930024F9D8 /* MainView.swift in Sources */,
+				4D4E02CA2AF068B800A0BADE /* Landing.swift in Sources */,
 				4D1679472AE9185A00D20E69 /* ScenePresentedViewModel.swift in Sources */,
 				4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */,
 				4DB3ED972AEE7CD1004D1D93 /* SentimentAnalyzer .mlmodel in Sources */,
 				4D4E02C42AF0422100A0BADE /* ViewModel.swift in Sources */,
 				4D3962532AE7F2940024F9D8 /* IdleView.swift in Sources */,
+				4D4E02C82AF0686F00A0BADE /* LandingPageView.swift in Sources */,
 				4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */,
 				4D9EAD6E2AE1B22100F4AC44 /* SleeppotApp.swift in Sources */,
 			);

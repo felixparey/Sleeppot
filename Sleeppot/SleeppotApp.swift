@@ -18,9 +18,7 @@ struct SleeppotApp: App {
     var body: some Scene {
         WindowGroup {
             if usedcount == 0{
-                Button("I Agree"){
-                    usedcount = 1
-                }
+                Landing()
             }else{
                 MainView()
                     .environment(scenePresentedVM)

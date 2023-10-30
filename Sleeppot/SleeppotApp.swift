@@ -13,13 +13,20 @@ struct SleeppotApp: App {
     @State private var scenePresentedVM = ScenePresentedViewModel()
     @State private var userInput = UserInput()
     @State private var viewModel = ViewModel()
+    @AppStorage("usedcount") var usedcount : Int = 0
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environment(scenePresentedVM)
-                .environment(userInput)
-                .environment(viewModel)
+            if usedcount == 0{
+                Button("I Agree"){
+                    usedcount = 1
+                }
+            }else{
+                MainView()
+                    .environment(scenePresentedVM)
+                    .environment(userInput)
+                    .environment(viewModel)
+            }
         }
     }
 }

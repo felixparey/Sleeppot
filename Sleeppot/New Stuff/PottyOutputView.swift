@@ -37,7 +37,9 @@ struct PottyOutputView: View {
                     Circle()
                         .frame(width: 40)
                     Image(systemName: "arrow.clockwise")
+                        .fontWeight(.semibold)
                         .foregroundStyle(.white)
+                        
                 }
 
             }

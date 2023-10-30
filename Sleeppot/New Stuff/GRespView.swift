@@ -91,15 +91,32 @@ struct GRespView: View {
 
 
 struct ResponseView: View{
+    @Environment(ScenePresentedViewModel.self) private var scenePresented
+    
     
     var body: some View{
         
         ZStack(alignment: .bottom){
             GRespView()
-            PottyOutputView()
-                .padding()
             
-            
+            VStack {
+                PottyOutputView()
+                    .padding()
+//                Button(action: {
+//                    
+//                }, label: {
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .frame(height: 50)
+//                        .padding(.horizontal)
+//                        .overlay {
+//                            Text("Express more feelings")
+//                                .font(.title2)
+//                                .fontWeight(.semibold)
+//                                .foregroundStyle(.white)
+//                        }
+//                        
+//                })
+            }
         }
     }
 }

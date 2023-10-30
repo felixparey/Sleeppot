@@ -13,6 +13,7 @@ import SwiftUI
 struct MainView: View {
     
     @Environment(ScenePresentedViewModel.self) private var scenePresentedVM
+    @State var count = 0
     
     func presentClouds(){
         scenePresentedVM.showClouds = false
@@ -74,6 +75,7 @@ struct MainView: View {
                     }
                     
                 case 2:
+                    
                     ResponseView()
                         .offset(y: -50)
                         .overlay(alignment: .topLeading) {
@@ -85,10 +87,23 @@ struct MainView: View {
                             } label: {
                                 HStack {
                                     Image(systemName: "arrow.backward.circle")
+                                        .symbolEffect(.bounce, value: scenePresentedVM.counterForAnimation)
                                         .font(.title)
+                                        .scaleEffect(x: 1.3, y: 1.3)
                                         .foregroundStyle(Color("textBoxColor"))
-                                        .padding()
+                                        .padding([.top, .leading, .bottom])
+                                        .padding(.trailing, 5)
                                         .clipShape(Circle())
+                                        
+                                    VStack(alignment: .leading) {
+                                        Text("Express")
+                                        Text("more feelings")
+                                         
+                                    }  
+                                    .shadow(color: .black, radius: 30)
+                                        .foregroundStyle(Color("textBoxColor"))
+                                        
+                                    
                                     Spacer()
                                 }
                             }
@@ -140,7 +155,7 @@ struct MainView: View {
                 }
                 
             }
-            if scenePresentedVM.showClouds == true{
+            if scenePresentedVM.showClouds{
                 CloudView()
             }
             
@@ -200,6 +215,21 @@ struct TextEditorView: View {
     var body: some View {
         
         let butto = Button(action: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
+                    scenePresentedVM.counterForAnimation = 1
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    scenePresentedVM.counterForAnimation = 2
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    scenePresentedVM.counterForAnimation = 3
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    scenePresentedVM.counterForAnimation = 4
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    scenePresentedVM.counterForAnimation = 5
+                }
             userInput.savedText = userText
             userText = ""
             viewModel.analyzeSentimentButtonTapped(userInput.savedText)
@@ -210,12 +240,12 @@ struct TextEditorView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 scenePresentedVM.showClouds = false
             }
-            
-            
         }, label: {
             ZStack{
                 Circle()
-                Image(systemName: "arrow.up")
+                Image(systemName: "paperplane.fill")
+                    .rotationEffect(.degrees(45))
+                    .offset(x: -2)
                     .foregroundStyle(.white)
             }
             .frame(width: 30, height: 30)
@@ -234,7 +264,7 @@ struct TextEditorView: View {
                 .textFieldStyle(.roundedBorder)
                 .foregroundStyle(Color("purpleTextColor"))
                 .scrollContentBackground(.hidden)
-                .background(Color("textBoxColor"))
+                .background(Color(.white))
                 .frame(height: 120)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()

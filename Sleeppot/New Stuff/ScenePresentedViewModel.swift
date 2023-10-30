@@ -12,4 +12,5 @@ import Observation
 class ScenePresentedViewModel{
     var scenePresented = 0
     var showClouds = false
+    var counterForAnimation = 0
 }

@@ -13,12 +13,11 @@ struct SleeppotApp: App {
     @State private var scenePresentedVM = ScenePresentedViewModel()
     @State private var userInput = UserInput()
     @State private var viewModel = ViewModel()
-    @AppStorage("usedcount") var usedcount : Int = 0
-    
+    @AppStorage("usedcount") var usedcount = false
     var body: some Scene {
         WindowGroup {
-            if usedcount == 0{
-                Landing()
+            if !usedcount {
+                OnBoardingView2()
             }else{
                 MainView()
                     .environment(scenePresentedVM)

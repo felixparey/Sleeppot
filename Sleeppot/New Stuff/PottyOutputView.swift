@@ -28,6 +28,7 @@ struct PottyOutputView: View {
                 .padding(.bottom, 30)
             
             Button(action: {
+                scenePresentedVM.respInReverse = true
                 mlOutput.analyzeSentimentButtonTapped(outputText.savedText)
                 //Maybe not go back to chat but just get different random line
                 //  scenePresentedVM.scenePresented = 1

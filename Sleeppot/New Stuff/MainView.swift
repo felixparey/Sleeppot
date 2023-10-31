@@ -76,7 +76,7 @@ struct MainView: View {
                     
                 case 2:
                     
-                    ResponseView()
+                    Response2View()
                         .offset(y: -50)
                         .overlay(alignment: .topLeading) {
                             Button {
@@ -89,19 +89,18 @@ struct MainView: View {
                                     Image(systemName: "arrow.backward.circle")
                                         .symbolEffect(.bounce, value: scenePresentedVM.counterForAnimation)
                                         .font(.title)
-                                        .scaleEffect(x: 1.3, y: 1.3)
-                                        .foregroundStyle(Color("textBoxColor"))
+//                                        .scaleEffect(x: 1.1, y: 1.1)
+                                        .foregroundStyle(Color.white)
                                         .padding([.top, .leading, .bottom])
                                         .padding(.trailing, 5)
                                         .clipShape(Circle())
                                         
                                     VStack(alignment: .leading) {
-                                        Text("Express")
-                                        Text("more feelings")
+                                        Text("Express more")
                                          
                                     }  
                                     .shadow(color: .black, radius: 30)
-                                        .foregroundStyle(Color("textBoxColor"))
+                                    .foregroundStyle(Color.white)
                                         
                                     
                                     Spacer()

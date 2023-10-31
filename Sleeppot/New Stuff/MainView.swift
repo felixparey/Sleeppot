@@ -253,12 +253,13 @@ struct TextEditorView: View {
             TextEditor(text: $userText)
                 .placeholder(when: userText.isEmpty, placeholder: {
                     VStack{
-                        Label("Tell me your feelings here...", systemImage: "pencil.line")
+                        Label("Tell me your feelings here... ", systemImage: "pencil.line")
                             .foregroundStyle(Color.gray)
-                            .padding([.top, .leading, .trailing], 7.0)
+                            .padding([.top, .trailing], 7.0)
                         Spacer()
                     }
                 })
+                .padding(EdgeInsets(top: 4, leading: 10, bottom: 10, trailing: 10))
                 .lineLimit(4)
                 .textFieldStyle(.roundedBorder)
                 .foregroundStyle(Color("purpleTextColor"))

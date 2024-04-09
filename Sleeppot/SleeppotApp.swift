@@ -20,9 +20,9 @@ struct SleeppotApp: App {
                 OnBoardingView2()
             }else{
                 MainView()
-                    .environment(scenePresentedVM)
-                    .environment(userInput)
-                    .environment(viewModel)
+                    .environment(ScenePresentedViewModel())
+                    .environment(UserInput())
+                    .environment(ViewModel())
             }
         }
     }

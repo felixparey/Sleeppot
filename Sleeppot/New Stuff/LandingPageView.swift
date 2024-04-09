@@ -29,8 +29,8 @@ struct LandingPageView: View {
 
     var body: some View {
         ZStack {
-            Color(Color.accentColor) // Imposto il colore di sfondo
-                .ignoresSafeArea()
+            Color("purpleTextColor") // Imposto il colore di sfondo
+                .ignoresSafeArea(.all, edges: .all)
 
             VStack {
                 HStack {

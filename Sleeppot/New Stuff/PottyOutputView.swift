@@ -51,4 +51,7 @@ struct PottyOutputView: View {
 
 #Preview {
     PottyOutputView()
+        .environment(ScenePresentedViewModel())
+        .environment(UserInput())
+        .environment(ViewModel())
 }

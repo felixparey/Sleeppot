@@ -15,7 +15,7 @@ struct OnboardingStep2{
 
 private let onBoardingSteps2 = [
     OnboardingStep2 (image: "capa1", title: "Welcome to Sleepot", description: "A soothing space for your \n thoughts, worries\n and solutions"),
-    OnboardingStep2 (image: "capa2", title: "How deos it work?", description: " " ),
+    OnboardingStep2 (image: "capa2", title: "How does it work?", description: " " ),
     OnboardingStep2 (image: "capa3", title: "First you collect your \n toughts...", description: " "),
     OnboardingStep2 (image: "capa 4", title: "Then you write them \n down", description: " "),
     OnboardingStep2 (image: "capa 5", title: "And in the end, you \n get an advice!", description: " "),
@@ -72,10 +72,24 @@ struct OnBoardingView2: View {
 
     var body: some View {
         ZStack {
+            
+            
             Color(Color("purpleTextColor")) // Imposto il colore di sfondo
-                .ignoresSafeArea()
+                .ignoresSafeArea(.all, edges: .all)
+            
             VStack {
-                Spacer()
+                
+//                HStack {
+//                    Spacer()
+//                    Button(action: {
+//                        self.currentStep = onBoardingSteps2.count - 1
+//                    }) {
+//                        Text("Skip")
+//                            .padding(16)
+//                            .foregroundColor(.white)
+//                    }
+//                }
+                
                 
                 TabView(selection: $currentStep) {
                     ForEach(0..<onBoardingSteps2.count) { it in
@@ -106,6 +120,7 @@ struct OnBoardingView2: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
+                
                 HStack {
                     ForEach(0..<onBoardingSteps2.count) { it in
                         if it == currentStep {
@@ -139,8 +154,8 @@ struct OnBoardingView2: View {
                         .foregroundColor(Color("purpleTextColor"))
                 }
                 .buttonStyle(PlainButtonStyle())
-            }
-        }
+            } //: VSTACK
+        } //:ZSTACK
     }
 }
 #Preview {

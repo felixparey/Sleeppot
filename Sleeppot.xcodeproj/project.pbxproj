@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09B399132AF0816600DA719C /* MLmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09B399122AF0816600DA719C /* MLmodel.mlmodel */; };
-		09B399152AF0816D00DA719C /* SentimentAnalyzer .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09B399142AF0816D00DA719C /* SentimentAnalyzer .mlmodel */; };
 		09B399172AF0828A00DA719C /* RespView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B399162AF0828A00DA719C /* RespView.swift */; };
 		09B3991B2AF1338400DA719C /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B3991A2AF1338400DA719C /* OnBoarding.swift */; };
+		09CB8A522AFD2F1300BE9132 /* MLmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09CB8A502AFD2F1300BE9132 /* MLmodel.mlmodel */; };
+		09CB8A532AFD2F1300BE9132 /* SentimentAnalyzer .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 09CB8A512AFD2F1300BE9132 /* SentimentAnalyzer .mlmodel */; };
 		4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D16793E2AE910FE00D20E69 /* ChatView.swift */; };
 		4D1679412AE9156800D20E69 /* GRespView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679402AE9156800D20E69 /* GRespView.swift */; };
 		4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1679442AE917E900D20E69 /* PottyOutputView.swift */; };
@@ -29,10 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09B399122AF0816600DA719C /* MLmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLmodel.mlmodel; path = ../../../../Desktop/Sleepot/Sleepot/MLmodel.mlmodel; sourceTree = "<group>"; };
-		09B399142AF0816D00DA719C /* SentimentAnalyzer .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "SentimentAnalyzer .mlmodel"; path = "../../../../Desktop/Sleepot/Sleepot/SentimentAnalyzer .mlmodel"; sourceTree = "<group>"; };
 		09B399162AF0828A00DA719C /* RespView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespView.swift; sourceTree = "<group>"; };
 		09B3991A2AF1338400DA719C /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
+		09CB8A502AFD2F1300BE9132 /* MLmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MLmodel.mlmodel; path = Sleeppot/MLmodel.mlmodel; sourceTree = SOURCE_ROOT; };
+		09CB8A512AFD2F1300BE9132 /* SentimentAnalyzer .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "SentimentAnalyzer .mlmodel"; path = "Sleeppot/SentimentAnalyzer .mlmodel"; sourceTree = SOURCE_ROOT; };
 		4D16793E2AE910FE00D20E69 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4D1679402AE9156800D20E69 /* GRespView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRespView.swift; sourceTree = "<group>"; };
 		4D1679442AE917E900D20E69 /* PottyOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PottyOutputView.swift; sourceTree = "<group>"; };
@@ -62,18 +62,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D3962502AE7F25D0024F9D8 /* Old Stuff */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Old Stuff";
-			sourceTree = "<group>";
-		};
 		4D3962512AE7F2670024F9D8 /* New Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				09B399122AF0816600DA719C /* MLmodel.mlmodel */,
-				09B399142AF0816D00DA719C /* SentimentAnalyzer .mlmodel */,
+				09CB8A502AFD2F1300BE9132 /* MLmodel.mlmodel */,
+				09CB8A512AFD2F1300BE9132 /* SentimentAnalyzer .mlmodel */,
 				4D3962522AE7F2940024F9D8 /* IdleView.swift */,
 				4D4E02C72AF0686F00A0BADE /* LandingPageView.swift */,
 				4D4E02C92AF068B800A0BADE /* Landing.swift */,
@@ -112,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				4D9EAD6D2AE1B22100F4AC44 /* SleeppotApp.swift */,
-				4D3962502AE7F25D0024F9D8 /* Old Stuff */,
 				4D3962512AE7F2670024F9D8 /* New Stuff */,
 				4D9EAD712AE1B22200F4AC44 /* Assets.xcassets */,
 				4D9EAD732AE1B22200F4AC44 /* Preview Content */,
@@ -199,8 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3962592AE83FC40024F9D8 /* PottyIdleTextView.swift in Sources */,
-				09B399132AF0816600DA719C /* MLmodel.mlmodel in Sources */,
 				4D1679492AE9238800D20E69 /* UserInput.swift in Sources */,
+				09CB8A532AFD2F1300BE9132 /* SentimentAnalyzer .mlmodel in Sources */,
 				4D4E02C62AF0431000A0BADE /* CloudView.swift in Sources */,
 				4D1679412AE9156800D20E69 /* GRespView.swift in Sources */,
 				4D3962572AE7F8930024F9D8 /* MainView.swift in Sources */,
@@ -209,8 +201,8 @@
 				4D16793F2AE910FE00D20E69 /* ChatView.swift in Sources */,
 				4D4E02C42AF0422100A0BADE /* ViewModel.swift in Sources */,
 				4D3962532AE7F2940024F9D8 /* IdleView.swift in Sources */,
-				09B399152AF0816D00DA719C /* SentimentAnalyzer .mlmodel in Sources */,
 				09B3991B2AF1338400DA719C /* OnBoarding.swift in Sources */,
+				09CB8A522AFD2F1300BE9132 /* MLmodel.mlmodel in Sources */,
 				4D4E02C82AF0686F00A0BADE /* LandingPageView.swift in Sources */,
 				4D1679452AE917E900D20E69 /* PottyOutputView.swift in Sources */,
 				09B399172AF0828A00DA719C /* RespView.swift in Sources */,

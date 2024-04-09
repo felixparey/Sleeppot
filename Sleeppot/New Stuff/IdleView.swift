@@ -20,7 +20,7 @@ struct IdleView: View {
                 .offset(y:-30)
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .onAppear {
-                    // Create a timer for the animation loop
+                // Create a timer for the animation loop
                     Timer.scheduledTimer(withTimeInterval: 1.0 / 30.0, repeats: true) { timer in
                         currentFrame = (currentFrame + 1) % frameCount
                     }

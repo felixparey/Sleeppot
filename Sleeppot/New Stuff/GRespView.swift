@@ -123,4 +123,7 @@ struct ResponseView: View{
 
 #Preview{
     ResponseView()
+        .environment(ScenePresentedViewModel())
+        .environment(UserInput())
+        .environment(ViewModel())
 }

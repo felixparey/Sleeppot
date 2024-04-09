@@ -8,8 +8,6 @@
 import SwiftUI
 
 
-
-
 struct MainView: View {
     
     @Environment(ScenePresentedViewModel.self) private var scenePresentedVM
@@ -164,6 +162,9 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environment(ScenePresentedViewModel())
+        .environment(UserInput())
+        .environment(ViewModel())
 }
 
 extension View {

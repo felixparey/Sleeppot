@@ -99,4 +99,7 @@ struct Response2View: View{
 
 #Preview{
     Response2View()
+        .environment(ScenePresentedViewModel())
+        .environment(UserInput())
+        .environment(ViewModel())
 }
